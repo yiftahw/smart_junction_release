@@ -1,0 +1,14 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>resources/arrow-return-180-left.png</file>
+    <file>resources/check.png</file>
+    <file>resources/close.png</file>
+    <file>resources/counter.ico</file>
+    <file>resources/dor.png</file>
+    <file>resources/DW.png</file>
+    <file>resources/mainwindow.ui</file>
+    <file>resources/minus.png</file>
+    <file>resources/plus.png</file>
+    <file>resources/UW.png</file>
+  </qresource>
+</RCC>

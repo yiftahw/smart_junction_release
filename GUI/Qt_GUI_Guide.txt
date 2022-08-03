@@ -1,0 +1,55 @@
+Steps for creating UI in Pyside6
+
+1. Create App.py file and add this template code:
+	import sys
+
+	from PySide6.QtWidgets import QApplication, QMainWindow
+
+
+	class MainWindow(QMainWindow):
+		def __init__(self):
+			super(MainWindow, self).__init__()
+
+
+	if __name__ == '__main__':
+		app = QApplication(sys.argv)
+
+		window = MainWindow()
+		window.show()
+
+		sys.exit(app.exec())
+		
+		
+2. Open Designer by running 'pyside6-designer' in terminal
+
+3. create your UI and save it as <UI_name>.ui
+
+4. Generate the ui file into py file by running 'pyside6-uic <UI_name>.ui >  ui_<PY_name>.py'
+
+5. edit App.py to look like this:
+	
+	import sys
+
+	from PySide6.QtWidgets import QApplication, QMainWindow
+	from PY_name import Ui_MainWindow
+
+
+	class MainWindow(QMainWindow):
+		def __init__(self):
+			super(MainWindow, self).__init__()
+			self.ui = Ui_MainWindow()
+			self.ui.setupUi(self)
+
+
+	if __name__ == '__main__':
+		app = QApplication(sys.argv)
+
+		window = MainWindow()
+		window.show()
+
+    sys.exit(app.exec())
+	
+(***) pyside6-rcc icons_resources.qrc -o icons_resources_rc.py
+
+
+Env Libs: sys ,os,pyside-6,json,pandas
